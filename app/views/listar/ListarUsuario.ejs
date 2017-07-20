@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Table Header</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/foundation/5.0.2/css/foundation.min.css'>
+
+      <link rel="stylesheet" href="css/listar.css">
+
+
+</head>
+
+<body>
+  <div id="bodywrap">
+<div class="row">
+<div class="large-10 columns">
+  <div class="scroll-window-wrapper">
+  <h2>
+    Usuarios<br>
+    <small>Lista</small>
+  </h2>
+	<div class="scroll-window">
+	<table class="table table-striped table-hover user-list fixed-header">
+		<thead>
+			<th><div>id</div></th>
+      <th><div>Treinador</div></th>
+      <th><div>Pokemon</div></th>
+			<th><div>Nivel</div></th>
+
+		</thead>
+  <% for(var i = 0; i < dados.length; i++){%>
+    <tbody>
+			<tr>
+        <td><%= dados[i].id%></td>
+        <td><%= dados[i].treinador%></td>
+				<td><%= dados[i].tipo%></td>
+				<td><%= dados[i].nivel%></td>
+
+				<td class="text-right">
+					<button class="button tiny">Alterar Nome</button>
+					<button class="button alert tiny">Apagar Usuario</button>
+				</td>
+			</tr>
+      <% } %>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+</body>
+</html>
