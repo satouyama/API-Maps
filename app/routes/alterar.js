@@ -20,7 +20,7 @@ module.exports = function(app){
             if(error){
               console.log(error);
             }else{
-              res.redirect('/');
+              res.redirect('/listar');
             }
          });
       });

@@ -14,7 +14,9 @@ cadastroDAO.prototype.alterarTreinador = function([dados,id],callback){
   this._connection.query("UPDATE treinador set ? WHERE id = ? ",[dados,id],callback);
   console.log(dados);
 }
-
+cadastroDAO.prototype.deletarTreinador = function ([id],callback) {
+   this._connection.query('delete from treinador where id = ?',[id],callback);
+};
 module.exports= function(){
   return cadastroDAO;
 }

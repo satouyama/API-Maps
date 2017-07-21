@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/principal.css">
     <link rel="stylesheet" type="text/css" href="css/datatables.css">
     <link rel="stylesheet" type="text/css" href="css/material.css">
-
+    <link rel="stylesheet" type="text/css" href="css/listar.css">
   </head>
   <body>
     <div id="sidebar">
@@ -57,7 +57,35 @@
        map:map,
        icon:''
      });
+     var contentString = 'Aqui tem um pokemon.</p>'+
+      'deseja batalhar ?' +
+     '<input type="button" class="button alert tiny" name="batalhar" value="BATALHAR">'+
+     '</div>'+
+     '</div>';
+
+ var infowindow = new google.maps.InfoWindow({
+   content: contentString
+ });
+     var marker2 = new google.maps.Marker({
+      position:{lat : -15.790822, lng: -47.883811},
+      map:map,
+      icon:''
+    });
+    marker.addListener('click', function() {
+             infowindow.open(map, marker);
+
+     });
+
+     marker.addListener('click', function() {
+              infowindow.open(map,marker2);
+      });
+
+
+
       }
+
+
+
 
     </script>
 
