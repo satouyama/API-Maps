@@ -20,7 +20,7 @@
 <div class="large-10 columns">
   <div class="scroll-window-wrapper">
   <h2>
-    Usuarios<br>
+    Lista de Treinadores<br>
     <small>Lista</small>
   </h2>
 	<div class="scroll-window">
@@ -41,8 +41,8 @@
 				<td><%= dados[i].nivel%></td>
 
 				<td class="text-right">
-					<button class="button tiny">Alterar Nome</button>
-					<button class="button alert tiny">Apagar Usuario</button>
+					<a href="/alterar/<%=dados[i].id%>"><button class="button tiny">Alterar nome </button></a>
+				<button class="button alert tiny">Apagar </button>
 				</td>
 			</tr>
       <% } %>
