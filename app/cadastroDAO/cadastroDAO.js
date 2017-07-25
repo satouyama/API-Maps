@@ -14,9 +14,20 @@ cadastroDAO.prototype.alterarTreinador = function([dados,id],callback){
   this._connection.query("UPDATE treinador set ? WHERE id = ? ",[dados,id],callback);
   console.log(dados);
 }
+
 cadastroDAO.prototype.deletarTreinador = function ([id],callback) {
    this._connection.query('delete from treinador where id = ?',[id],callback);
 };
+
+cadastroDAO.prototype.Testarteste = function([id],callback){
+  this._connection.query('select *from treinador where id = ?',[id],callback);
+}
+
+
+cadastroDAO.prototype.PokemonBatalha = function ([pokemonIdA,pokemonIdB],callback) {
+ this._connection.query('select *from treinador where id in (?,?)',[pokemonIdA,pokemonIdB],callback);
+};
+
 module.exports= function(){
   return cadastroDAO;
 }

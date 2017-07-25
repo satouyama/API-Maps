@@ -9,13 +9,12 @@ module.exports = function(app){
      var cadastroDAO = new app.app.cadastroDAO.cadastroDAO(connection);
 
      var treinador = {
-
         treinador: req.body.treinador,
         tipo : req.body.tipo,
         nivel : 1
          }
 
-         if(req.body.tipo === "pikachu"){
+         if(req.body.tipo === "pikachu" | req.body.tipo ==="charizard" | req.body.tipo ==="mewtwo" ){
 
            cadastroDAO.cadastrarPokemon(treinador,function(error,result){
               if(error){
